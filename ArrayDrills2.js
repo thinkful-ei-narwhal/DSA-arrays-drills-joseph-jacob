@@ -23,6 +23,6 @@ function filterNums(arr) {
 
 console.log(filterNums([2, 4, 10, 5, 6, 2, 1]));
 
-// 
+// Max sum solution
 
 function maxSum(numArr)
