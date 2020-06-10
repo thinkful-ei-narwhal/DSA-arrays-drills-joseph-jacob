@@ -21,8 +21,24 @@ function filterNums(arr) {
   return newArray;
 }
 
-console.log(filterNums([2, 4, 10, 5, 6, 2, 1]));
-
 // Max sum solution
 
-function maxSum(numArr)
+function maxSum(numArr) {
+  //find a sequence of passed in arr that is larger than any other
+  //sequence in the array
+  let maxSum = 0;
+  let currentSum = 0;
+  
+  for(let i = 0; i < numArr.length; i++) {
+    currentSum += numArr[i];
+    if(currentSum > maxSum) {
+      maxSum = currentSum;
+    }
+  }
+  return maxSum;
+}
+
+const arr = [4, 6, -3, 5, -2, 1];
+console.log(maxSum(arr));
+
+
