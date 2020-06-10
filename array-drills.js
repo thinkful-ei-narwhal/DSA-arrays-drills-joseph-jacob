@@ -44,7 +44,6 @@ class Array {
     return memory.get(this.ptr + index);
   }
 
-
 }
 
 function main() {

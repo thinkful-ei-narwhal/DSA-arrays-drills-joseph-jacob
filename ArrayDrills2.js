@@ -8,3 +8,15 @@ function Urlify(string) {
 }
 
 console.log(Urlify('www.thinkful.com /tauh ida parv een'));
+
+function filterNums(arr) {
+  const newArray = [];
+  for(let i = 0; i < arr.length; i++) {
+    if (arr[i] > 5) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+}
+
+console.log(filterNums([2, 4, 10, 5, 6, 2, 1]));
