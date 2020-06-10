@@ -42,27 +42,5 @@ const arr = [4, 6, -3, 5, -2, 1];
 console.log(maxSum(arr));
 
 
-//multiply all the numbers 
 
 
-function Product(arr){
-
-  var temp = [];
-
-
-  var product = 1;
-  for(var i=0; i<arr.length; i++){
-    temp[i] = product;
-    product *= arr[i];
-  }
-
-  product = 1;
-  for(var i=arr.length-1; i>=0; i--){
-    temp[i] *= product;
-    product *= arr[i];
-  }
-
-  return temp;
-}
-
-console.log(Product([1, 3, 9, 4]));
