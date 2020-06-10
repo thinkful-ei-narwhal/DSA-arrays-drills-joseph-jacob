@@ -44,3 +44,5 @@ console.log(maxSum(arr));
 
 
 
+console.log(findProducts([1, 3, 9, 4]));
+
