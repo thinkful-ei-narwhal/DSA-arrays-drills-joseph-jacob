@@ -38,11 +38,57 @@ function maxSum(numArr) {
   return maxSum;
 }
 
-const arr = [4, 6, -3, 5, -2, 1];
-console.log(maxSum(arr));
+function findProducts(arr) {
+  const newArray = [];
+  for(let i = 0; i < arr.length; i++) {
+    let value = 1;
+    for(let n = 0; n < arr.length; n++) {
+      if (arr.indexOf(arr[i]) !== arr.indexOf(arr[n])) {
+        value *= arr[n]
+      }
+    }
+    newArray.push(value)
+  }
+  return newArray
+}
 
 
 
 
-console.log(findProducts([1, 3, 9, 4]));
+//
+function ArraySearcher(arr) {
+  //search through array, when you hit a 0, set the entire row and column to 0
+  let zeroColumn = [];
+  let zeroRow = [];
 
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr.length; j++) {
+      if(arr[i][j] === 0) {
+        zeroRow[i] = true;
+        zeroColumn[j] = true;
+      }
+    }
+  }
+  for(let k = 0; k < arr.length; k++) {
+    for(let m = 0; m < arr[k].length; m++) {
+      if(zeroRow[k] || zeroColumn[m]) {
+        arr[k][m] = 0;
+      }
+    }
+  }
+  return arr;
+}
+const input = [[1,0,1,1,0],
+  [0,1,1,1,0],
+  [1,1,1,1,1],
+  [1,0,1,1,1],
+  [1,1,1,1,1]];
+console.log(ArraySearcher(input));
+
+
+
+function rotateString(str1, str2) {
+  return (str2 + str2).indexOf(str1) !== -1;
+}
+
+console.log(rotateString('amazon', 'azonma'));
