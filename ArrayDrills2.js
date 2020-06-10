@@ -9,6 +9,8 @@ function Urlify(string) {
 
 console.log(Urlify('www.thinkful.com /tauh ida parv een'));
 
+// Filter out all number less than 5 in an array
+
 function filterNums(arr) {
   const newArray = [];
   for(let i = 0; i < arr.length; i++) {
@@ -20,3 +22,7 @@ function filterNums(arr) {
 }
 
 console.log(filterNums([2, 4, 10, 5, 6, 2, 1]));
+
+// 
+
+function maxSum(numArr)
